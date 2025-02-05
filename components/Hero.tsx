@@ -1,6 +1,8 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import ShimmerButton from './ui/ShimmerButton'
+import {FaLocationArrow} from 'react-icons/fa6'
 
 const Hero = () => {
     return (
@@ -19,11 +21,11 @@ const Hero = () => {
 
             <div className="flex justify-center relative my-20 z-10">
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-                    <h2 className="uppercase tracking-widest text-6xl text-center text-blue-100 font-extrabold font-outfit animate-color-change mb-4 animate-fade-in-up ">
+                    <h1 className="uppercase tracking-widest text-6xl text-center text-blue-100 font-extrabold font-outfit animate-color-change mb-4 animate-fade-in-up ">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
-                        Richard Winner Duvor
-                        </span>                    
-                    </h2>
+                            Richard Winner Duvor
+                        </span>
+                    </h1>
 
                     <TextGenerateEffect
                         className="text-center text-[40px] md:text-5xl lg:text-6xl"
@@ -31,10 +33,16 @@ const Hero = () => {
                     />
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                        Hi, I&apos;m Richard Winner Duvor, a blockchain developer and frontend engineer. I build smart contracts and code magic into user interfaces. When I'm not coding, I'm debugging life with a cup of coffee ☕. Ready to create the future? Let's do this! 🚀
-
+                        Hi, I&apos;m an expert software developer with vast experience in blockchain development, artificial intelligence, and frontend engineering. I build secure smart contracts, brilliant AI agents, and code magic into user interfaces. When I'm not coding, I'm debugging life with a cup of coffee. Ready to create the future? Let's do this!
                     </p>
 
+                    <a href="#about">
+                        <ShimmerButton
+                            title="Have a look here!"
+                            icon={<FaLocationArrow/>}
+                            position='right'
+                        />
+                    </a>
                 </div>
 
             </div>
