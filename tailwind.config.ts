@@ -26,6 +26,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        outfit: ['Outfit', 'sans-serif'],
+      },
       colors: {
         black: {
           DEFAULT: "#000",

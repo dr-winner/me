@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Outfit, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '600'], // Choose required weights
+  variable: '--font-outfit', // CSS variable name
+  display: 'swap',
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -25,9 +33,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${outfit.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
       </body>
     </html>
   );
