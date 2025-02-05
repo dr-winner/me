@@ -29,7 +29,7 @@ const Hero = () => {
 
                     <TextGenerateEffect
                         className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                        words="Blockchain Developer Specialized in Smart Contracts Engineering, Artificial Intelligence and Front-End Development"
+                        words="Blockchain Developer Specialized in Smart Contracts Engineering, AI/MLOps and Front-End Design"
                     />
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
