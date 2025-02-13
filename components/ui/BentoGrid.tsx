@@ -1,8 +1,12 @@
+'use client'
+
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
 import { useState } from 'react';
-
+import animationData from '@/data/confetti.json';
+import Lottie from "react-lottie";
+import ShimmerButton from "./ShimmerButton";
 
 export const BentoGrid = ({
     className,
@@ -46,6 +50,11 @@ export const BentoGridItem = ({
 }) => {
 
     const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText('drwinner03@gmail.com');
+        setCopied(true);
+    }
     return (
         <div className={cn(
             "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
@@ -119,8 +128,24 @@ export const BentoGridItem = ({
                     {id === 6 && (
                         <div className="mt-5 relative">
                             <div className={`absolute -bottom-5 right-0`}>
-                                <Lott
+                                <Lottie options={{
+                                    loop: copied,
+                                    autoplay: copied,
+                                    animationData,
+                                    rendererSettings: {
+                                        preserveAspectRatio: 'xMidYMid slice'
+                                    }
+                                }}/>
                             </div>
+
+
+                            <ShimmerButton
+                            title={copied ? 'Address copied' : 'Copy my email address'}
+                            icon={<IoCopyOutline/>}
+                            position="left"
+                            otherClasses="!bg-[#161a31]"
+                            handleClick={handleCopy}
+                            />
 
                         </div>
 
