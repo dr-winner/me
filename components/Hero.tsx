@@ -21,7 +21,7 @@ const Hero = () => {
 
             <div className="flex justify-center relative my-20 z-10">
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-                    <h1 className="uppercase tracking-widest text-6xl text-center text-blue-100 font-extrabold font-outfit animate-color-change mb-4 animate-fade-in-up ">
+                    <h1 className="uppercase tracking-widest text-5xl text-center text-blue-100 font-extrabold font-outfit animate-color-change mb-4 animate-fade-in-up ">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
                             Richard Winner Duvor
                         </span>
